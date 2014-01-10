@@ -1,0 +1,25 @@
+{
+  "name": "angular-highchart-module",
+  "version": "0.0.1",
+  "description": "Angular module for rendering highcharts",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/becomingGuru/angular-highcharts-module.git"
+  },
+  "keywords": [
+    "angular",
+    "highcharts"
+  ],
+  "author": "Lakshman Prasad",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/becomingGuru/angular-highcharts-module/issues"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.2"
+  }
+}
