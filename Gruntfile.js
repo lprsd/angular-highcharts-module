@@ -3,6 +3,16 @@ module.exports = function (grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         library: grunt.file.readJSON('bower.json'),
+
+        connect: {
+            server: {
+                options: {
+                    port: 9001,
+                    base: 'sample'
+                }
+            }
+        },
+
         concat: {
             options: {
                 separator: ''
@@ -66,8 +76,10 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-connect');
 
     grunt.registerTask('default', ['jshint:beforeConcat', 'concat', 'jshint:afterConcat', 'uglify']);
     grunt.registerTask('livereload', ['default', 'watch']);
+    grunt.registerTask('sample', ['connect:server:keepalive']);
 
 };
